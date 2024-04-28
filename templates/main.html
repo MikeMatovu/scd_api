@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pain Prediction</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-light bg-dark">
+        <span class="navbar-text">
+            <h1>Pain Predictor</h1>
+        </span>
+    </nav>
+
+    <form action="{{ url_for('main') }}" method="POST">
+        <div class="form-group">
+
+            <legend>Input Variables</legend>
+            <br>S/N<br>
+            <input name="S/N" type="number" class="form-control" required>
+            <br>
+
+            <br>Gender (sex):<br>
+            <input name="Gender (sex)" type="number" class="form-control" required>
+            <br>
+
+            <br>Age of patient:<br>
+            <input name="Age of patient" type="number" class="form-control" required>
+            <br>
+
+            <br>Age at diagnosis:<br>
+            <input name="Age at diagnosis" type="number" class="form-control" required>
+            <br>
+
+            <br>Body Mass Index BMI:<br>
+            <input name="Body Mass Index BMI" type="number" class="form-control" required>
+            <br>
+
+            <br>Packet Cell Volume (PCV):<br>
+            <input name="Packet Cell Volume (PCV)" type="number" class="form-control" required>
+            <br>
+
+            <br>Frequency of Anemia Crisis:<br>
+            <input name="Frequency of Anemia Crisis" type="number" class="form-control" required>
+            <br>
+
+            <br>Frequency of Blood Transfusions:<br>
+            <input name="Frequency of Blood Transfusions" type="number" class="form-control" required>
+            <br>
+
+            <br>Peripheral Capillary Oxygen Saturation (Spo2):<br>
+            <input name="Peripheral Capillary Oxygen Saturation (Spo2)" type="number" class="form-control" required>
+            <br>
+
+            <br>Systolic BP:<br>
+            <input name="Systolic BP" type="number" class="form-control" required>
+            <br>
+
+            <br>Diastolic BP:<br>
+            <input name="Diastolic BP" type="number" class="form-control" required>
+            <br>
+
+            <br>Heart Rate (Pulse):<br>
+            <input name="Heart Rate (Pulse)" type="number" class="form-control" required>
+            <br>
+
+            <br>Respiratory Rate (Resp):<br>
+            <input name="Respiratory Rate (Resp)" type="number" class="form-control" required>
+            <br>
+
+            <br>Hb F:<br>
+            <input name="Hb F" type="number" class="form-control" required>
+            <br>
+
+            <br>Temp:<br>
+            <input name="Temp" type="number" class="form-control" required>
+            <br>
+
+            <br>Mean corpuscular volume (MCV):<br>
+            <input name="Mean corpuscular volume (MCV)" type="number" class="form-control" required>
+            <br>
+
+            <br>Platelets (PLTS):<br>
+            <input name="Platelets (PLTS)" type="number" class="form-control" required>
+            <br>
+
+            <br>Alanine Aminotransferase (ALT) test:<br>
+            <input name="Alanine Aminotransferase (ALT) test" type="number" class="form-control" required>
+            <br>
+
+            <br>Bilirubin:<br>
+            <input name="Bilirubin" type="number" class="form-control" required>
+            <br>
+
+            <br>Lactate Dehydrogenase (LDH):<br>
+            <input name="Lactate Dehydrogenase (LDH)" type="number" class="form-control" required>
+            <br>
+
+            <br>Percentage average:<br>
+            <input name="Percentage average" type="number" class="form-control" required>
+            <br>
+
+
+            <br>
+            <input type="submit" value="Submit" class="btn btn-primary">
+        </div>
+    </form>
+
+    <br>
+
+    <div class="result" align="center">
+        
+        <h1>Predicted Pain:</h1>
+        {% if result == 0 %}
+        <p style="font-size:50px">Mild Pain</p>
+        {% elif result == 1 %}
+        <p style="font-size:50px">Vasso-Occlussive crisis</p>
+        {% endif %}
+        
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
