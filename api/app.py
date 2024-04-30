@@ -45,17 +45,18 @@ def main():
                                     
                                        index=['input'])
         
-        model = load("model/best_model.joblib")
+        # model = load("model/best_model.joblib")
     
-        predictions = model.predict(input_variables)[0]
-        probabilities = model.predict_proba(input_variables)[0]
-        print(predictions)
+        # predictions = model.predict(input_variables)[0]
+        # probabilities = model.predict_proba(input_variables)[0]
+        # print(predictions)
         
-        print(probabilities)
+        # print(probabilities)
         return jsonify({
-                'prediction': str(predictions),
-                'probability0': probabilities[0],
-                'probability1': probabilities[1]
+                # 'prediction': str(predictions),
+                # 'probability0': probabilities[0],
+                # 'probability1': probabilities[1]
+                'test': "test"
         })
         
 
